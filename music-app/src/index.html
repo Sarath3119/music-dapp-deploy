@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Musically Secured</title>
+	<style>
+		body {
+			font-family: Arial, sans-serif;
+			background-color: #f7f7f7;
+		}
+
+		h1 {
+			text-align: center;
+			margin-top: 50px;
+			font-size: 36px;
+			color: #333;
+		}
+
+		button {
+			display: block;
+			margin: 20px auto;
+			padding: 10px 20px;
+			font-size: 24px;
+			border: none;
+			border-radius: 5px;
+			background-color: #0077c2;
+			color: #fff;
+			cursor: pointer;
+			transition: background-color 0.3s ease;
+		}
+
+		button:hover {
+			background-color: #0065a4;
+		}
+	</style>
+	<script>
+		function redirectToPage(pageName) {
+			window.location.href = pageName;
+		}
+	</script>
+	<script src="https://cdn.jsdelivr.net/npm/web3@1.2.11/dist/web3.min.js"></script>
+</head>
+<body>
+	<h1>Musically Secured </h1>
+	<button onclick="redirectToPage('seller.html')">I'm a Seller</button>
+	<button onclick="redirectToPage('bidder.html')">I'm a Bidder</button>
+	<button onclick="redirectToPage('mint.html')">Mint</button>
+	<button onclick="redirectToPage('hbid.html')">View Highest bid</button>
+	<button onclick="redirectToPage('ListMusic.html')">List IDs</button>
+	<button onclick="redirectToPage('buy.html')">Buy</button>
+	<button onclick="redirectToPage('sell.html')">Sell</button>
+	<button onclick="redirectToPage('sell_partial.html')">Send profits</button>
+
+</body>
+</html>

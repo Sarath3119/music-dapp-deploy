@@ -1,0 +1,142 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Seller UI Form</title>
+	<style>
+		form {
+			margin: 20px auto;
+			max-width: 600px;
+			padding: 20px;
+			background-color: #f7f7f7;
+			border-radius: 5px;
+			box-shadow: 0px 0px 5px 0px rgba(0,0,0,0.2);
+			font-family: Arial, sans-serif;
+		}
+
+		h1 {
+			text-align: center;
+			font-size: 32px;
+			color: #4CAF50;
+			margin-top: 0;
+		}
+
+		label {
+			display: block;
+			margin-bottom: 8px;
+			font-size: 16px;
+			color: #333;
+		}
+
+		input[type="text"], input[type="number"], input[type="email"], input[type="tel"], select, textarea {
+			padding: 12px;
+			width: 100%;
+			border: 1px solid #ccc;
+			border-radius: 4px;
+			box-sizing: border-box;
+			margin-bottom: 16px;
+			font-size: 16px;
+			color: #555;
+			font-family: inherit;
+			resize: vertical;
+		}
+
+		input[type="text"]:focus, input[type="number"]:focus, input[type="email"]:focus, input[type="tel"]:focus, select:focus, textarea:focus {
+			outline: none;
+			border-color: #4CAF50;
+			box-shadow: 0px 0px 5px 0px rgba(76, 175, 80, 0.5);
+		}
+
+		select {
+			appearance: none;
+			-webkit-appearance: none;
+			-moz-appearance: none;
+			background: url('data:image/svg+xml;utf8,<svg fill="rgba(0, 0, 0, 0.54)" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M7 10l5 5 5-5z"/></svg>') no-repeat right 10px center/15px 15px;
+			padding-right: 30px;
+		}
+
+
+		input[type="submit"] {
+			background-color: #4CAF50;
+			color: white;
+			padding: 12px 20px;
+			border: none;
+			border-radius: 4px;
+			cursor: pointer;
+			float: right;
+			font-size: 16px;
+			transition: background-color 0.3s ease;
+		}
+
+		input[type="submit"]:hover {
+			background-color: #45a049;
+		}
+
+		.clearfix::after {
+			content: "";
+			clear: both;
+			display: table;
+		}
+
+		@media screen and (max-width: 600px) {
+			input[type="submit"] {
+				width: 100%;
+				float: none;
+			}
+		}
+
+	
+	</style>
+</head>
+<body>
+	<h1>Seller UI Form</h1>
+	<form>
+		<!-- <label for="artist-name">Artist Name:</label>
+		<input type="text" id="artist-name" name="artist-name" placeholder="Enter the artist name..." required> -->
+
+		<label for="music-id">Music ID:</label>
+		<input type="number" id="music_id" name="music-id" placeholder="Enter the music id..." required>
+
+
+		<label for="for-sale">For Sale:</label>
+		<select id="for-sale" name="for-sale" required>
+			<option value="" disabled selected>Select one...</option>
+			<option value="yes">Yes</option>
+			<option value="no">No</option>
+		</select>
+
+		<label for="min-price">Min Price:</label>
+		<input type="number" id="min_price" name="min-price" placeholder="Enter the minimum price..." required>
+	
+		
+		
+		<div class="clearfix">
+			<input id="list" type="submit" value="List to sale">
+		</div> 
+		<p        >			
+			
+		</p>
+
+		<div class="clearfix">
+			<input id="unlist" type="submit" value="Unlist to sale">
+		</div> 
+		
+	</form>
+	<script>
+		function redirectToPage(pageName) {
+			window.location.href = pageName;
+		}
+	</script>
+
+	<button id= "home" onclick="redirectToPage('index.html')">Home</button>
+
+ <!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
+ <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+
+ <!-- Include all compiled plugins (below), or include individual files as needed -->
+ <script src="js/dist/bootstrap.min.js"></script>
+ <script src="js/dist/web3.min.js"></script>
+ <script src="js/dist/truffle-contract.js"></script>
+ <script src="js/app.js"></script>
+
+</body>
+</html>
